@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CountryList } from './Components/Card-List/CountryList';
 import { SearchBox } from './Components/Search-box/Search-Box';
+
 import './Countries.styles.css';
 
 
@@ -31,7 +32,9 @@ class Countries extends Component {
          country.region.toLowerCase().includes(regionField.toLowerCase()));
         
          return(
+           
                 <div className={darkMode ? "dark-mode" : "light-mode" }>
+                    
                     <nav className="navbar-items">
                         <h1 className="header">Where in the World</h1>
                         <div className="moon-end">
@@ -57,6 +60,7 @@ class Countries extends Component {
                     <CountryList countries={filterCountries} />
 
                 </div>
+                
         )
     }
 }
