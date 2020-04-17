@@ -1,0 +1,78 @@
+h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+
+
+.Input {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.switch {
+    align-self: flex-end;
+    margin: 0.9375rem;
+}
+.inner-switch {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 1.25rem;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1875rem;
+    margin-left: 0.3125rem;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
+  }
+  .dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color:hsl(0, 0%, 100%);
+  }
+  
+  .dark-mode nav {
+    background-color: #1b2938;
+  }
+  .light-mode-desktop {
+    background-color: hsl(0, 0%, 98%);
+  }
+  .moon {
+    font-size: 3em;
+  }
+  button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+
+}
+.moon-end {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 200px;
+}
+
+  /* .moonDark::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f186"
+    
+  }
+   */
