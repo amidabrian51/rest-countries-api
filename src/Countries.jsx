@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CountryList } from './Components/Card-List/CountryList';
 import { SearchBox } from './Components/Search-box/Search-Box';
+import { NavBarCard }from './Components/NavBar/NavBarCard';
 
 import './Countries.styles.css';
 
@@ -35,7 +36,7 @@ class Countries extends Component {
            
                 <div className={darkMode ? "dark-mode" : "light-mode" }>
                     
-                    <nav className="navbar-items">
+                    {/* <nav className="navbar-items">
                         <h1 className="header">Where in the World</h1>
                         <div className="moon-end">
                         <button onClick={this.setDarkMode}>
@@ -43,7 +44,8 @@ class Countries extends Component {
                         </button>
                         <h2>{darkMode ? "Dark Mode" : "Light Mode" }</h2>
                         </div>
-                    </nav>
+                    </nav> */}
+                     <NavBarCard handlechange={this.setDarkMode} moonMode={darkMode ? "moon fas fa-moon" : "moon far fa-moon"} darkMode={darkMode ? "dark-mode" : "light-mode"}/>
 
 
                     <div className="Input">
