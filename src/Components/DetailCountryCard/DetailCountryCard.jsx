@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useEffect } from "react";
 import { useState } from "react";
 import { NavBarCard } from '../NavBar/NavBarCard';
@@ -29,8 +28,10 @@ function DetailCountryCard ({ match }) {
       };
     
       return (
-        
-        
+        // <div>
+        //   <h1>the country</h1>
+        // </div>
+       
         <div className={darkMode ? "dark-mode" : "light-mode" }>
           
             <NavBarCard handlechange={()=> setDarkMode(prevMode => !prevMode)} moonMode={darkMode ? "moon fas fa-moon" :
@@ -65,7 +66,7 @@ function DetailCountryCard ({ match }) {
                     <br />
                     <div>
                    
-                      <h2>Border Countries:</h2>{country.borders.map(function(border){
+                      <h2>Border Countries:</h2>{country.borders && country.borders.map(function(border){
                       return(
                       <Link to={`/DetailCard/${border}`}>
                       <button className="myButton"> {border} </button>
@@ -78,13 +79,13 @@ function DetailCountryCard ({ match }) {
                 </div>
                 <div className="domain">
                   <h2>Top Level Domain: </h2>
-                  <p>{country.topLevelDomain[0]}</p>
+                  <p>{country.topLevelDomain}</p>
                   <br />
                   <h2>Currencies: </h2>
-                  <p>{country.currencies.map(({ name }) => name).join(", ")}</p>
+                  <p>{country.currencies && country.currencies.map(({ name }) => name).join(", ")}</p>
                   <br />
                   <h2>Languages: </h2>
-                  <p>{country.languages.map(({ name }) => name).join(", ")}</p>
+                  <p>{country.languages && country.languages.map(({ name }) => name).join(", ")}</p>
                   <br />
                 </div>
               </div>
