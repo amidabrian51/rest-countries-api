@@ -5,9 +5,9 @@ import { NavBarCard } from '../NavBar/NavBarCard';
 import './DetailCountryCard.css';
 import {Link} from 'react-router-dom';
 
-function DetailCountryCard ({ match }) {
+function DetailCountryCard ({ match, history }) {
     useEffect(() => {
-        fetchItem();
+        fetchItem(match.params.name);
         console.log(match);
         // eslint-disable-next-line 
       }, []);
@@ -18,13 +18,14 @@ function DetailCountryCard ({ match }) {
       
 
     
-      const fetchItem = async () => {
+      const fetchItem = async (alpha3Code) => {
         const fetchItem = await fetch(
-          `https://restcountries.eu/rest/v2/alpha/${match.params.alpha3Code}`
+          `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`
         );
         const country = await fetchItem.json();
         setCountry(country);
         console.log(country);
+        console.log(match.params.alpha3Code)
       };
     
       return (
@@ -66,13 +67,18 @@ function DetailCountryCard ({ match }) {
                     <br />
                     <div>
                    
-                      <h2>Border Countries:</h2>{country.borders && country.borders.map(function(border){
-                      return(
-                      <Link to={`/DetailCard/${border}`}>
-                      <button className="myButton"> {border} </button>
-                      </Link>
-                      )
-                      })}
+                      <h2>Border Countries:</h2>{country.borders
+                  ? country.borders.map((border) => (
+                      <button
+                        className="myButton"
+                        onClick={() => {
+                          fetchItem(border);
+                          history.push(`/DetailCard/${border}`);
+                        }}
+                      >
+                        {border}
+                      </button>
+                    )):null}
                     </div>
                     
                   </div>
