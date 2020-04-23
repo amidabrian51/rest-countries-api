@@ -18,6 +18,7 @@ class Countries extends Component {
         this.setDarkMode = this.setDarkMode.bind(this);
     };
 
+
     componentDidMount() {
         fetch("https://restcountries.eu/rest/v2/all")
         .then(response => response.json())

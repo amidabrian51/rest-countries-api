@@ -35,3 +35,16 @@
   justify-content: flex-end;
   padding-right: 200px;
 }
+@media only screen and (max-width: 375px) {
+  /* button {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  } */
+  .header
+  .moon-end {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

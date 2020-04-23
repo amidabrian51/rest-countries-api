@@ -2,7 +2,7 @@
     width: 85vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
     grid-gap: 50px;
     /* background-color: hsl(0, 0%, 98%); */
   }
@@ -19,9 +19,11 @@
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
   }
+  a { color: inherit; } 
   p{
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
+    
   }
   .card-container:hover {
     transform: scale(1.05);
@@ -53,3 +55,25 @@
   border-radius: 2px;
   box-sizing: border-box;
   }
+
+  @media screen and (min-width: 375px) and (max-width: 800px) {
+    .card-list {
+      width: 85vw;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+      }
+   }
+
+  @media only screen and (max-width: 375px) {
+  
+.card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+  }
+}
+

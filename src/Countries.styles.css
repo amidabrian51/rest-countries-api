@@ -6,6 +6,7 @@ h1 {
 
 p {
     text-align: center;
+    text-decoration: none;
 }
 
 
@@ -39,7 +40,7 @@ p {
   }
   .dark-mode {
     background-color: hsl(207, 26%, 17%);
-    color:hsl(0, 0%, 100%);
+    color: white;
   }
   
   .dark-mode nav {
@@ -70,6 +71,26 @@ p {
   justify-content: flex-end;
   padding-right: 200px;
 }
+
+@media only screen and (max-width:  375px) and (max-width: 800px) {
+  .Input {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="search"]{
+    margin: 0 auto;
+    height: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  input[type="regions"]{
+    margin: 0 auto;
+    height: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+}
+
 
   /* .moonDark::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f186"

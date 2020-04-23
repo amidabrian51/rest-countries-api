@@ -34,14 +34,14 @@ function DetailCountryCard ({ match, history }) {
         // </div>
        
         <div className={darkMode ? "dark-mode" : "light-mode" }>
-          
-            <NavBarCard handlechange={()=> setDarkMode(prevMode => !prevMode)} moonMode={darkMode ? "moon fas fa-moon" :
-              "moon far fa-moon"}
-              darkMode={darkMode ? "dark-mode" : "light-mode"}/>
+
+          <NavBarCard handlechange={()=> setDarkMode(prevMode => !prevMode)} moonMode={darkMode ? "moon fas fa-moon" :
+            "moon far fa-moon"}
+            darkMode={darkMode ? "dark-mode" : "light-mode"}/>
             <div className="detailCard">
               <Link to="/">
-            <button className="topButton myButton">Back</button>
-            </Link>
+              <button className="topButton myButton">Back</button>
+              </Link>
               <div className="container">
 
                 <img className="flag" alt="flag" src={country.flag} />
@@ -66,21 +66,19 @@ function DetailCountryCard ({ match, history }) {
                     <p> {country.capital}</p>
                     <br />
                     <div>
-                   
+
                       <h2>Border Countries:</h2>{country.borders
-                  ? country.borders.map((border) => (
-                      <button
-                        className="myButton"
-                        onClick={() => {
-                          fetchItem(border);
-                          history.push(`/DetailCard/${border}`);
+                      ? country.borders.map((border) => (
+                      <button className="myButton" onClick={()=> {
+                        fetchItem(border);
+                        history.push(`/DetailCard/${border}`);
                         }}
-                      >
+                        >
                         {border}
                       </button>
-                    )):null}
+                      )):null}
                     </div>
-                    
+
                   </div>
                 </div>
                 <div className="domain">
@@ -96,7 +94,7 @@ function DetailCountryCard ({ match, history }) {
                 </div>
               </div>
 
-          </div>
+            </div>
         </div>
         
       );
