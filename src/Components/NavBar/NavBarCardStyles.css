@@ -30,21 +30,26 @@
   justify-content: space-between;
 
 }
+.headerNav {
+  padding-left: 100px;
+}
 .moon-end {
   display: flex;
   justify-content: flex-end;
   padding-right: 200px;
 }
 @media only screen and (max-width: 375px) {
-  /* button {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-  } */
-  .header
+ 
+  .headerNav {
+    padding-left: 50px;
+    padding-right: 70px;
+    white-space: nowrap;
+    
+  }
+  
   .moon-end {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }

@@ -33,7 +33,7 @@ function DetailCountryCard ({ match, history }) {
         //   <h1>the country</h1>
         // </div>
        
-        <div className={darkMode ? "dark-mode" : "light-mode" }>
+        <div className={darkMode ? "card-dark-mode" : "card-light-mode" }>
 
           <NavBarCard handlechange={()=> setDarkMode(prevMode => !prevMode)} moonMode={darkMode ? "moon fas fa-moon" :
             "moon far fa-moon"}

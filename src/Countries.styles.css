@@ -41,6 +41,9 @@ p {
   .dark-mode {
     background-color: hsl(207, 26%, 17%);
     color: white;
+    height: 100%;
+    
+    
   }
   
   .dark-mode nav {
@@ -51,6 +54,7 @@ p {
   }
   .moon {
     font-size: 3em;
+    
   }
   button {
     background-color: Transparent;
@@ -61,11 +65,7 @@ p {
     outline:none;
 }
 
-.navbar-items {
-  display: flex;
-  justify-content: space-between;
 
-}
 .moon-end {
   display: flex;
   justify-content: flex-end;
@@ -84,11 +84,33 @@ p {
     margin-bottom: 20px;
   }
   input[type="regions"]{
-    margin: 0 auto;
+    margin-left: 80px;
     height: 20px;
-    width: 70%;
+    width: 40%;
     margin-bottom: 20px;
   }
+  .dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+    height: 100%;
+    width: fit-content;
+    
+  }
+  .light-mode {
+    background-color: #fff;
+    color: #333;
+    width: fit-content;
+  }
+  .moon {
+    padding-right: 10px;
+    font-size: 2em;
+  }
+  .moon-end {
+    padding-right: 50px;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  
 }
 
 

@@ -6,15 +6,15 @@
 .Country {
   text-align: justify;
 }
-.light-mode {
+.card-light-mode {
   background-color: #fff;
   color: #333;
 }
-.dark-mode {
-  height: 100%;
+.card-dark-mode {
+  height: 1400px;
   background-color: hsl(207, 26%, 17%);
   color:hsl(0, 0%, 100%);
-  height: 1400px;
+  /* height: 1400px; */
 }
 /* .NativeName {
     display: inline-block;
@@ -76,6 +76,19 @@ h2,
   .topButton {
     position: relative;
     left: 150px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
+    .card-dark-mode {
+      width: fit-content;
+    }
+
+    
   }
   
   /* .domain {

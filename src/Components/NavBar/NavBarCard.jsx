@@ -3,13 +3,13 @@ import './NavBarCardStyles.css';
 
 
 export const NavBarCard = ({moonMode, darkMode, handlechange}) => (
-    <nav className="navbar-items">
-    <h1 className="header">Where in the World</h1>
-    <div className="moon-end">
+<nav className="navbar-items">
+    <h1 className="headerNav">Where in the World?</h1>
+      <div className="moon-end">
         <button onClick={handlechange}>
-            <i className={moonMode }></i>
+            <i className={moonMode}></i>
         </button>
-        <h2>{ darkMode }</h2>
+    <h2>{ darkMode }</h2>
     </div>
 </nav>
    
