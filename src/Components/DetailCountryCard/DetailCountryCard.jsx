@@ -40,7 +40,9 @@ function DetailCountryCard ({ match, history }) {
             darkMode={darkMode ? "dark-mode" : "light-mode"}/>
             <div className="detailCard">
               <Link to="/">
-              <button className="topButton myButton">Back</button>
+              <button className="topButton myButton">
+              <i class="fas fa-arrow-left"></i>Back
+              </button>
               </Link>
               <div className="container">
 
