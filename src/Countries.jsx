@@ -37,15 +37,6 @@ class Countries extends Component {
            
                 <div className={darkMode ? "dark-mode" : "light-mode" }>
                     
-                    {/* <nav className="navbar-items">
-                        <h1 className="header">Where in the World</h1>
-                        <div className="moon-end">
-                        <button onClick={this.setDarkMode}>
-                        <i className={darkMode ? "moon fas fa-moon" : "moon far fa-moon" }></i> 
-                        </button>
-                        <h2>{darkMode ? "Dark Mode" : "Light Mode" }</h2>
-                        </div>
-                    </nav> */}
                      <NavBarCard handlechange={this.setDarkMode} moonMode={darkMode ? "moon fas fa-moon" : "moon far fa-moon"} darkMode={darkMode ? "dark-mode" : "light-mode"}/>
 
 
