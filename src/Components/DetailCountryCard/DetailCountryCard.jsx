@@ -40,63 +40,61 @@ function DetailCountryCard ({ match, history }) {
             darkMode={darkMode ? "dark-mode" : "light-mode"}/>
             <div className="detailCard">
               <Link to="/">
-              <button className="topButton myButton">
-              <i class="fas fa-arrow-left"></i>Back
+              <button className={darkMode ? "topButton myButtonDark" : "topButton myButton"}>
+                <i class="fas fa-arrow-left"></i>Back
               </button>
               </Link>
               <div className="container">
 
                 <img className="flag" alt="flag" src={country.flag} />
-
-                <div className="countryName">
-
-                  <div className="NativeName">
-                    <h1 className="Country">{country.name}</h1>
-                    <h2>Native Name:</h2>
-                    <p> {country.nativeName}</p>
-                    <br />
-                    <h2>Population:</h2>
-                    <p> {country.population}</p>
-                    <br />
-                    <h2>Region:</h2>
-                    <p> {country.region}</p>
-                    <br />
-                    <h2>Sub Region:</h2>
-                    <p> {country.subregion}</p>
-                    <br />
-                    <h2>Capital:</h2>
-                    <p> {country.capital}</p>
-                    <br />
-                    <div>
-
-                      <h2>Border Countries:</h2>{country.borders
-                      ? country.borders.map((border) => (
-                      <button className="myButton" onClick={()=> {
-                        fetchItem(border);
-                        history.push(`/DetailCard/${border}`);
-                        }}
-                        >
-                        {border}
-                      </button>
-                      )):null}
+                <div className="borderName">
+                  <div class="countryName">
+                    <div className="NativeName">
+                      <h1 className="Country">{country.name}</h1>
+                      <h2>Native Name:</h2>
+                      <p> {country.nativeName}</p>
+                      <br />
+                      <h2>Population:</h2>
+                      <p> {country.population}</p>
+                      <br />
+                      <h2>Region:</h2>
+                      <p> {country.region}</p>
+                      <br />
+                      <h2>Sub Region:</h2>
+                      <p> {country.subregion}</p>
+                      <br />
+                      <h2>Capital:</h2>
+                      <p> {country.capital}</p>
+                      <br />
                     </div>
-
+                  </div>
+                  <div class="borderCountries">
+                    <h2>Border Countries:</h2>{country.borders
+                    ? country.borders.map((border) => (
+                    <button className={darkMode ? "myButtonDark" : "myButton"} onClick={()=> {
+                      fetchItem(border);
+                      history.push(`/DetailCard/${border}`);
+                      }}
+                      >
+                      {border}
+                    </button>
+                    )):null}
+                  </div>
+                  <div class="domain">
+                    <h2>Top Level Domain: </h2>
+                    <p>{country.topLevelDomain}</p>
+                    <br />
+                    <h2>Currencies: </h2>
+                    <p>{country.currencies && country.currencies.map(({ name }) => name).join(", ")}</p>
+                    <br />
+                    <h2>Languages: </h2>
+                    <p>{country.languages && country.languages.map(({ name }) => name).join(", ")}</p>
+                    <br />
                   </div>
                 </div>
-                <div className="domain">
-                  <h2>Top Level Domain: </h2>
-                  <p>{country.topLevelDomain}</p>
-                  <br />
-                  <h2>Currencies: </h2>
-                  <p>{country.currencies && country.currencies.map(({ name }) => name).join(", ")}</p>
-                  <br />
-                  <h2>Languages: </h2>
-                  <p>{country.languages && country.languages.map(({ name }) => name).join(", ")}</p>
-                  <br />
-                </div>
               </div>
-
             </div>
+
         </div>
         
       );
