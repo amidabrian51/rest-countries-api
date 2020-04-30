@@ -11,7 +11,7 @@ function App() {
         <Route exact path="/" component={Countries} />
         <Route
           exact
-          path={`/Petra`}
+          path={`/Test`}
           component={TestCard}
         />
         <Route path={"/DetailCard/:name"} component={DetailCountryCard} />

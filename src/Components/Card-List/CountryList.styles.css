@@ -1,9 +1,11 @@
 .card-list {
     width: 85vw;
+    /* min-height: 85vw; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr  1fr 1fr 1fr;
     grid-gap: 50px;
+    
     /* background-color: hsl(0, 0%, 98%); */
   }
   .card-container {
